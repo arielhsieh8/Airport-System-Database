@@ -1,0 +1,6 @@
+README 
+
+Description: Simulates an airport system database with multiple airlines, airplanes, airports, staff, customers, tickets, and other functionalities.
+
+init.py: Python flask program to establish flow between html pages 
+.html files: dictates the view of each page in airport system 
