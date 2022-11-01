@@ -1,0 +1,23 @@
+<html>
+<head>
+</head>
+<body>
+{%if error%}
+  {{error}} </br>
+{%endif%}
+{%if data%}
+  <h1>Welcome {{username}}, View Your Flights</h1>
+  <h1>Future Flights:</h1>
+  <h1>{{data}}</h1>
+
+  <a href="/logout">Logout</a>
+  <a href="/staff_searchflights_dates">Search Specific Flights- Dates</a>
+  <a href="/staff_searchflights_route">Search Flight Routes</a>
+  <a href="/staff_customers_on_flights">Customers on a flight</a>
+{%endif%}
+<a href="/staff_home">Go back</a>
+
+</body>
+
+
+</html>

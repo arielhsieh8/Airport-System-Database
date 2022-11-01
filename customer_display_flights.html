@@ -1,0 +1,42 @@
+
+<html>
+
+<head>
+  <style>
+  table, th, td {
+    border:1px solid black;
+  }
+  </style>
+
+</head>
+
+<body>
+{% if not flights %}
+  <p class="message"> You don't have any flights. </p> </br>
+	<a href="/login">Login</a>
+	<a href="/register">Register</a>
+{% endif %}
+
+{% if flights %}
+	<p class="flights">You are logged in {{username}}. Here are your flights: </p> </br>
+	</br>
+  <table style="width:100%">
+    <tr>
+      <th>Flight Number</th>
+      <th>Departure Date</th>
+      <th>Departure Time</th>
+    </tr>
+    {% for f in flights%}
+      <tr>
+        <td>{{f[0]}}</td>
+        <td>{{f[1]}}</td>
+        <td>{{f[2]}}</td>
+      </tr>
+    {% endfor %}
+  </table>
+{% endif %}
+</br>
+<a href="/customer_home">Go back</a>
+</body>
+
+</html>

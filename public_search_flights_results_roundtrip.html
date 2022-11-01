@@ -1,0 +1,70 @@
+
+<html>
+
+<head>
+
+</head>
+
+<style>
+table, th, td {
+  border:1px solid black;
+}
+</style>
+
+<body>
+{% if error %}
+  <p class="message"> {{error}} </p> </br>
+{% endif %}
+
+{% if leaving_flights and returning_flights %}
+	<p class="flights"> Here are the flights you searched for: </p> </br>
+  <table style="width:100%">
+    Leaving Flights:
+    <tr>
+      <th>Flight Number</th>
+      <th>Departure Date</th>
+      <th>Departure Time</th>
+      <th>Ticket Price</th>
+      <th>Status</th>
+      <th>Airline Name</th>
+    </tr>
+    {% for f in leaving_flights%}
+      <tr>
+        <td>{{f[0]}}</td>
+        <td>{{f[1]}}</td>
+        <td>{{f[2]}}</td>
+        <td>${{f[3]}}</td>
+        <td>{{f[4]}}</td>
+        <td>{{f[5]}}</td>
+      </tr>
+    {% endfor %}
+
+  <table style="width:100%">
+    </br>
+    Returning Flights:
+    <tr>
+      <th>Flight Number</th>
+      <th>Departure Date</th>
+      <th>Departure Time</th>
+      <th>Ticket Price</th>
+      <th>Status</th>
+      <th>Airline Name</th>
+    </tr>
+    {% for f in returning_flights%}
+      <tr>
+        <td>{{f[0]}}</td>
+        <td>{{f[1]}}</td>
+        <td>{{f[2]}}</td>
+        <td>${{f[3]}}</td>
+        <td>{{f[4]}}</td>
+        <td>{{f[5]}}</td>
+      </tr>
+    {% endfor %}
+  </table>
+	{% endif %}
+</body>
+
+<a href="/public_search_flights_roundtrip">Go back</a>
+
+
+</html>

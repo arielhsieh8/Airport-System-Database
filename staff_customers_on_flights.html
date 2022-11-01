@@ -1,0 +1,25 @@
+<html>
+<head>
+</head>
+<body>
+<form action="/customers_on_flights_Auth" method="POST">
+	<h1> Enter Flight Number: </h1>
+
+	<input type="text" name = "flight_number" placeholder="flight number" required/> </br>
+	<input type="submit" value = Submit  />
+	#purchase-- gives what customer bought which ticket id
+	#sold for-- gives ticketid and flight number
+
+	{% if error %}
+
+		<p class="error"><strong>Error:</strong> {{error}}</p>
+
+	{% endif %}
+	<h1>{{data}}</h1>
+</form>
+
+<a href="/staff_viewflights">Go back</a>
+
+</body>
+
+</html>

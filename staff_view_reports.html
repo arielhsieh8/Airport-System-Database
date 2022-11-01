@@ -1,0 +1,33 @@
+<html>
+
+</style>
+
+<body>
+
+<form action="/staff_view_reports_Auth" method="POST">
+	<h1> Enter start date </h1>
+	<input type="text" name= "start_date" placeholder ="start date " required/></br>
+    <h1> Enter end date </h1>
+    <input type="text" name= "end_date" placeholder ="end date" required/></br>
+
+	<input type="submit" name= "submit" value = Submit />
+
+
+	{% if error %}
+
+		<p class="error"><strong>Error:</strong> {{error}}</p>
+
+	{% endif %}
+
+</form>
+
+
+<h1>
+
+    total tickets based on given range = {{data}}
+</h1>
+
+<a href="/staff_home">Go back</a>
+</body>
+
+</html>

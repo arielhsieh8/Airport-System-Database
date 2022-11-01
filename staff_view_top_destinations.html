@@ -1,0 +1,32 @@
+<html>
+<head>
+</head>
+<body>
+
+<form action="/staff_view_top_destinations" method="POST">
+    top destinations in past 3 months (most popular first): </br>
+    {%for val in data_3_months%}
+      {{val[0]}} </br>
+    {%endfor%}
+    <br>
+    top destinations in past 1 year (most popular first): </br>
+    {%for val in data_1_year%}
+      {{val[0]}} </br>
+    {%endfor%}
+
+
+
+	{% if error %}
+
+		<p class="error"><strong>Error:</strong> {{error}}</p>
+
+	{% endif %}
+
+</form>
+
+
+<a href="/staff_home">Go back</a>
+
+</body>
+
+</html>

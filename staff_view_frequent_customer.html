@@ -1,0 +1,31 @@
+<html>
+<head>
+</head>
+<body>
+	most frequent customer within the past year = {{most_frequent_customer}}
+
+<form action="/staff_view_frequent_customer_Auth" method="POST">
+	<h1> Enter customer email </h1>
+	<input type="text" name= "customer_email" placeholder ="customer email" required/></br>
+
+	<input type="submit" value = Submit />
+
+
+	{% if error %}
+
+		<p class="error"><strong>Error:</strong> {{error}}</p>
+
+	{% endif %}
+
+</form>
+
+<h1>
+
+    {{data}}
+</h1>
+
+<a href="/staff_home">Go back</a>
+
+</body>
+
+</html>

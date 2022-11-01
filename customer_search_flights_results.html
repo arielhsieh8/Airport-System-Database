@@ -1,0 +1,61 @@
+
+<html>
+
+<head>
+
+</head>
+
+<style>
+table, th, td {
+  border:1px solid black;
+}
+</style>
+
+<body>
+{% if error %}
+  <p class="message"> {{error}} </p> </br>
+	<a href="/customer_search_flights">Go back</a>
+{% endif %}
+
+{% if flights %}
+	<p class="flights"> Here are the flights you searched for: </p> </br>
+	</br>
+  <table style="width:100%">
+    <tr>
+      <th>Flight Number</th>
+      <th>Departure Date</th>
+      <th>Departure Time</th>
+      <th>Ticket Price</th>
+      <th>Status</th>
+      <th>Airline Name</th>
+    </tr>
+    {% for f in flights%}
+      <tr>
+        <td>{{f[0]}}</td>
+        <td>{{f[1]}}</td>
+        <td>{{f[2]}}</td>
+        <td>${{f[3]}}</td>
+        <td>{{f[4]}}</td>
+        <td>{{f[5]}}</td>
+      </tr>
+  	{% endfor %}
+  </table>
+  <form action="/purchase_ticket" method="POST">
+    Would you like to purchase a ticket for one of the above flights? (If yes, fill out information below:) </br>
+  	Flight Number: <input type="text" name = "flight number" required/> </br>
+  	Departure Date: <input type="date" id="departure date" name = "departure date" required/> </br>
+  	Departure Time: <input type="text" id = "departure time" name = "departure time" placeholder = "hour:minute:second (ex: 12:05:00)" required/> </br>
+    Airline Name: <input type="text" name = "airline name" required/> </br>
+    </br>
+    Payment Information </br> Card Type: <input type="text" name = "card type" placeholder="Visa, Mastercard, etc." required/>  </br>
+  	Card Number: <input type="text" name = "card number" required/> </br>
+  	Name on Card: <input type="text" name = "name on card" required/></br>
+  	Card Expiration Date: <input type="date" name = "card expiration date" required/></br>
+  	<input type="submit" value = "Purchase Ticket" />
+	{% endif %}
+</body>
+
+
+
+
+</html>

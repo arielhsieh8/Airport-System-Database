@@ -1,0 +1,19 @@
+<html>
+<head>
+</head>
+<body>
+<form action="/customer_give_rating" method="POST">
+  <p class> Which flight would you like to rate? </p> </br>
+  <input type="text" name="flight number" placeholder="flight number"/> </br>
+  <p class> How would you rate your flight out of 5? </p> </br>
+	<input type="number" name = "rating" /> </br>
+  <p class> Would you like to leave a comment about your flight? </p> </br>
+	<input type="text" name = "comment"/> </br>
+	<input type="submit" value = Submit />
+	{% if error %}
+		<p class="error"><strong>Error:</strong> {{error}}</p>
+	{% endif %}
+</form>
+<a href="/customer_home">Go back</a>
+</body>
+</html>

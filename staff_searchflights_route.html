@@ -1,0 +1,46 @@
+<html>
+<head>
+</head>
+<body>
+<form action="/staff_searchflights_route_Auth_citySource" method="POST">
+	<h1> Enter Initial City Name: </h1>
+
+	<input type="text" name = "city_name" placeholder="flight number" /> </br>
+	<input type="submit" value = Submit  />
+</form>
+
+<form action="/staff_searchflights_route_Auth_airportSource" method="POST">
+	<h1> Enter Initial Airport Name: </h1>
+
+	<input type="text" name = "airport_name" placeholder="airport name" /> </br>
+	<input type="submit" value = Submit  />
+</form>
+
+<form action="/staff_searchflights_route_Auth_cityDestination" method="POST">
+	<h1> Enter Destination City Name: </h1>
+
+	<input type="text" name = "city_name" placeholder="city name" /> </br>
+	<input type="submit" value = Submit  />
+
+<form>
+
+<form action="/staff_searchflights_route_Auth_airportDestination" method="POST">
+		<h1> Enter Destination Airport Name: </h1>
+
+		<input type="text" name = "airport_name" placeholder="airport_name" /> </br>
+		<input type="submit" value = Submit  />
+</form>
+
+	{% if error %}
+
+		<p class="error"><strong>Error:</strong> {{error}}</p>
+
+	{% endif %}
+	<h1>{{data}}</h1>
+
+
+<a href="/">Go back</a>
+
+</body>
+
+</html>

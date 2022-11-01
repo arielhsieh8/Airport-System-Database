@@ -1,0 +1,20 @@
+<html>
+<head>
+</head>
+<body>
+<form action="/public_search_flights_results" method="POST">
+  <p class> Search for Flight: </p> </br>
+  <p class> Departing Airport City: </p>
+  <input type="text" name="departing city"/> </br>
+  <p class> Destination Airport City: </p> </br>
+	<input type="text" name = "destination city" /> </br>
+  <p class> Departing Date: </p> </br>
+	<input type="date" name = "date" placeholder="year-month-day"/> </br>
+	<input type="submit" value = Search />
+	{% if error %}
+		<p class="error"><strong>Error:</strong> {{error}}</p>
+	{% endif %}
+</form>
+<a href="/public_search_flights_choice">Go back</a>
+</body>
+</html>

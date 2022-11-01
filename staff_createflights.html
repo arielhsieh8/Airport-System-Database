@@ -1,0 +1,43 @@
+<html>
+<head>
+</head>
+<body>
+<form action="/staff_createflights_Auth" method="POST">
+		<h1> Enter flight number </h1>
+		<input type="text" name= "flight_number" placeholder ="flight number" required/></br>
+		<h1> Enter Departure Date: </h1>
+    <input type="text" name= "departure_date" placeholder ="departure date" required/></br>
+    <h1> Enter Departure Time: </h1>
+    <input type="text" name= "departure_time" placeholder ="departure time" required/></br>
+		<h1> Enter Departure Airport Code: </h1>
+    <input type="text" name= "d_airport_code" placeholder ="departure airport code" required/></br>
+		<h1> Enter Arrival Date: </h1>
+    <input type="text" name= "arrival_date" placeholder ="arrival date" required/></br>
+    <h1> Enter Arrival Time: </h1>
+    <input type="text" name= "arrival_time" placeholder ="arrival time" required/></br>
+		<h1> Enter Arrival Airport Code: </h1>
+    <input type="text" name= "a_airport_code" placeholder ="arrival airport code" required/></br>
+    <h1> Enter Base Price: </h1>
+    <input type="text" name= "base_price" placeholder ="base price" required/></br>
+    <h1> Enter Status: </h1>
+		<input type="text" name= "status" placeholder ="status" required/></br>
+    <h1> Enter Airline Name: </h1>
+    <input type="text" name= "airline_name" placeholder ="status" required/></br>
+		<h1> Enter Airplane ID: </h1>
+    <input type="text" name= "airplane_id" placeholder ="airplane id" required/></br>
+	<input type="submit" value = Submit />
+	<h1>{{data}}</h1>
+
+	{% if error %}
+
+		<p class="error"><strong>Error:</strong> {{error}}</p>
+
+	{% endif %}
+
+</form>
+
+<a href="/staff_home">Go back</a>
+
+</body>
+
+</html>

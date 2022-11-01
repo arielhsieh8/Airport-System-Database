@@ -1,0 +1,25 @@
+<html>
+<head>
+</head>
+<body>
+
+<form action="/staff_view_earned_revenue_Auth" method="POST">
+    revenue for last month: {{revenue_in_last_month}} </br>
+    revenue for last year: {{revenue_in_last_year}}
+
+
+
+	{% if error %}
+
+		<p class="error"><strong>Error:</strong> {{error}}</p>
+
+	{% endif %}
+
+</form>
+
+
+<a href="/staff_home">Go back</a>
+
+</body>
+
+</html>

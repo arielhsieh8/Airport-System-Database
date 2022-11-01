@@ -1,0 +1,47 @@
+
+<html>
+
+<head>
+
+</head>
+
+<style>
+table, th, td {
+  border:1px solid black;
+}
+</style>
+
+
+<body>
+{% if error %}
+  <p class="message"> {{error}} </p> </br>
+{% endif %}
+{%if month_info%}
+  This is your total spending within the range you specified: ${{year_info[0]}} </br>
+  </br>
+  This is your spending by month in the range you specified (if month is not displayed, it means you did not spend any money that month)
+  <table style="width:100%">
+    <tr>
+      <th>Month</th>
+      <th>Monthly Spending</th>
+    </tr>
+    {% for amount in month_info%}
+      <tr>
+        <td>{{amount[0]}}</td>
+        <td>${{amount[1]}}</td>
+      </tr>
+    {%endfor%}
+  </table>
+  </br>
+  <form action="/customer_spending_interval" method="POST">
+    Filter for another date range: </br>
+  	Beginning Date: <input type="date" name = "beginning date" required/> </br>
+  	End Date: <input type="date" name = "end date" required/> </br>
+  	<input type="submit" value = "Filter" />
+  </form>
+{%endif%}
+
+<a href="/customer_spending">Go back</a>
+</body>
+
+</html>

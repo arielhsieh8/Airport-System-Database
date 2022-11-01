@@ -1,0 +1,27 @@
+<html>
+<head>
+</head>
+<body>
+<form action="/staff_find_flights_range" method="POST">
+	<h1> Enter Start Date: </h1>
+
+	<input type="date" name= "startdate" placeholder ="start date" required/></br>
+	<h1> Enter End Date: </h1>
+	<input type="date" name= "enddate" placeholder ="end date" required/></br>
+
+	<input type="submit" value = Submit />
+	<h1>{{data}}</h1>
+
+	{% if error %}
+
+		<p class="error"><strong>Error:</strong> {{error}}</p>
+
+	{% endif %}
+
+</form>
+
+<a href="/">Go back</a>
+
+</body>
+
+</html>

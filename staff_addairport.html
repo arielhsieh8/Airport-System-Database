@@ -1,0 +1,28 @@
+<html>
+<head>
+</head>
+<body>
+<form action="/staff_addairport_Auth" method="POST">
+	<h1> Enter airport name </h1>
+	<input type="text" name= "airport_name" placeholder ="airport name" required/></br>
+    <h1> Enter airport city: </h1>
+	<input type="text" name= "airport_city" placeholder ="airport city" required/></br>
+    <h1> Enter airport code </h1>
+	<input type="text" name= "airport_code" placeholder ="airport code" required/></br>
+
+	<input type="submit" value = Submit />
+	<h1>{{data}}</h1>
+
+	{% if error %}
+
+		<p class="error"><strong>Error:</strong> {{error}}</p>
+
+	{% endif %}
+
+</form>
+
+<a href="/staff_home">Go back</a>
+
+</body>
+
+</html>
