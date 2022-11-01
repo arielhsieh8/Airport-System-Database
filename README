@@ -1,6 +1,30 @@
-README 
+Airport System Database
 
 Description: Simulates an airport system database with multiple airlines, airplanes, airports, staff, customers, tickets, and other functionalities.
 
 init.py: Python flask program to establish flow between html pages 
 .html files: dictates the view of each page in airport system 
+
+Summary: 
+Customer_display_flights.html - Displays the flights that the customer has coming up. Customer_home.html - home page for when the customer logs in Customer_index.html - page for customer to choose to log in or register Customer_login.html - login page for customer
+Customer_rating.html - page for customer to input their rating and comment for a flight they’ve taken
+Customer_register.html - register page for customer to input their information Customer_search_flights_choice.html - asks the customer whether they want to search for one-way or round-trip flights
+Customer_search_flights_results_roundtrip.html - Displays the results of the customer search for round-trip flights
+Customer_search_flights_results.html - Displays the results of the customer search for one-way flights
+Customer_search_flights_roundtrip.html - page for customer to input their search parameters for round trip flights they want to search for
+Customer_search_flights.html - page for customer to input their search parameters for one-way flights they want to search for
+Customer_spending_default.html - default page to display how much the customer has spent Customer_spending_interval.html - page to display how much the customer spent based on date interval they specified
+Home.html - starting page for the system
+Public_flightstatus.html - displays the status of the flight that was searched for Public_home.html - home page for public users
+Public_search_flights_choice.html - page for public users to decide to search for one-way or round trips
+Public_search_flights_results_roundtrip.html - Displays the results of the public user search for round-trip flights
+Public_search_flights_results.html - Displays the results of the public user search for one-way flights
+Public_search_flights_roundtrip.html - page for public user to input their search parameters for round trip flights they want to search for
+Public_search_flights.html - page for public user to input their search parameters for one-way flights they want to search for
+Public_search.html - page for public user to input search parameter to find flight status Staff_addairplane.html - Front end (form) that allows airplane staff to add airline into the system Staff_addairport.html - Front end (form) that allows airplane staff to add new airport into system Staff_changestatus.html - Front end (form) that allows airplane staff to change status of flights in the system
+Staff_createflights.html - Front end (form) that allows airplane staff to add new flights into system staff_customers_on_flights.html - displays the customers on a searched-for flight Staff_flights_for_customer.html - displays the flights a customer has taken
+Staff_home.html - Home page that shows all functions that airport staff can carry out Staff_index.html - Front end ( Form) takes in register or log in information for airline staff Staff_login.html - log in form that allows airplane staff to enter credentials to enter system
+Staff_register.html - Front end (form) that allows airplane staff to register into system Staff_searchflights_dates.html - Front end (form) takes in a date range and shows all flights within that date range
+Staff_searchflights_route.html - Front end(form) takes in certain characteristics of flight (source airport/source destination) and shows all flights within that range Staff_view_earned_revenue.html - Front end displays total revenue for last month and last year Staff_view_flight_ratings.html - Form takes in flight number and displays average rating of flight & all comments and ratings of flight by each customer
+Staff_view_frequent_customer.html - Front end that shows most frequent customer of the year, Also has form that allows for data input so staff can see all flights a customer took their airline Staff_view_reports.html - Front end(form) takes in date range and Gives total amount of tickets purchased in that time frame & monthly breakdown of tickets purchased in a table Staff_view_top_destinations.html - Front end displays 3 most frequent destinations for last 3 months and last year
+Staff_viewflights.html- Home page front end- displays all flights within next 30 days
